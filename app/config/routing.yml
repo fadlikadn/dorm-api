@@ -1,0 +1,147 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    
+showdorm:
+    path: /api/dormitory/show
+    defaults:  { _controller: AppBundle:Dormitory:showmap }
+    
+showuser:
+    path: /api/profile/show
+    defaults:  { _controller: AppBundle:Profile:show }
+    
+editsaveprofile:
+    path: /api/profile/editsave
+    defaults:  { _controller: AppBundle:Profile:editsave }
+    
+changepassworduser:
+    path: /api/profile/changepassword
+    defaults:  { _controller: AppBundle:Profile:changepassword }
+    
+uploadphotouser:
+    path: /api/profile/upload
+    defaults:  { _controller: AppBundle:Profile:uploadPhoto }
+    
+showuserlist:
+    path: /api/admin/user/show
+    defaults:  { _controller: AppBundle:User:show }
+    
+editsaveuser:
+    path: /api/admin/user/editsave
+    defaults:  { _controller: AppBundle:User:editsave }
+    
+deleteuser:
+    path: /api/admin/user/delete/{id}
+    defaults:  { _controller: AppBundle:User:delete }
+    
+showdplist:
+    path: /api/admin/dp/show
+    defaults:  { _controller: AppBundle:DormProvider:show }
+    
+editsavedp:
+    path: /api/admin/dp/editsave
+    defaults:  { _controller: AppBundle:DormProvider:editsave }
+    
+deletedp:
+    path: /api/admin/dp/delete/{id}
+    defaults:  { _controller: AppBundle:DormProvider:delete }
+    
+showdormlist:
+    path: /api/admin/dorm/show
+    defaults:  { _controller: AppBundle:Dormitory:show }
+    
+editsavedorm:
+    path: /api/admin/dorm/editsave
+    defaults:  { _controller: AppBundle:Dormitory:editsave }
+    
+deletedorm:
+    path: /api/admin/dorm/delete/{id}
+    defaults:  { _controller: AppBundle:Dormitory:delete }
+    
+adminbookingshow:
+    path: /api/admin/booking/show
+    defaults:  { _controller: AppBundle:Booking:adminbooking }
+    
+adminbookingreject:
+    path: /api/admin/booking/reject/{id}
+    defaults:  { _controller: AppBundle:Booking:adminrejectbooking }
+    
+showdpdormlist:
+    path: /api/dp/dorm/show
+    defaults:  { _controller: AppBundle:Dormitory:showdp }
+    
+addsavedpdorm:
+    path: /api/dp/dorm/addsave
+    defaults:  { _controller: AppBundle:Dormitory:addsavedp }
+    
+editsavedpdorm:
+    path: /api/dp/dorm/editsave
+    defaults:  { _controller: AppBundle:Dormitory:editsavedp }
+    
+deletedpdorm:
+    path: /api/dp/dorm/delete/{id}
+    defaults:  { _controller: AppBundle:Dormitory:deletedp }
+    
+detaildorm:
+    path: /api/dorm/detail/{id}
+    defaults:  { _controller: AppBundle:Dormitory:showDetail }
+    
+deletephotodorm:
+    path: /api/dorm/photo/delete/{id}
+    defaults:  { _controller: AppBundle:Dormitory:deletePhoto }
+    
+uploadphotodorm:
+    path: /api/dorm/upload
+    defaults:  { _controller: AppBundle:Dormitory:uploadPhoto }
+    
+ratingdorm:
+    path: /api/dorm/rating
+    defaults:  { _controller: AppBundle:Dormitory:rating }
+    
+countratingdorm:
+    path: /api/dorm/checkrating/{id}
+    defaults:  { _controller: AppBundle:Dormitory:countRating }
+    
+bookingscheduledorm:
+    path: /api/dorm/booking-schedule
+    defaults:  { _controller: AppBundle:Dormitory:bookingSchedule }
+    
+bookingdorm:
+    path: /api/booking/submit
+    defaults:  { _controller: AppBundle:Booking:submit }
+    
+bookinglist:
+    path: /api/booking/mybooking
+    defaults:  { _controller: AppBundle:Booking:mybooking }
+    
+bookingdelete:
+    path: /api/booking/deletebooking/{id}
+    defaults:  { _controller: AppBundle:Booking:delete }
+    
+bookingnotif:
+    path: /send-notif
+    defaults:  { _controller: AppBundle:Booking:sendNotification }
+    
+dpbookinglist:
+    path: /api/booking/dpbooking
+    defaults:  { _controller: AppBundle:Booking:dpbooking }
+    
+dprejectbooking:
+    path: /api/booking/dprejectbooking/{id}
+    defaults:  { _controller: AppBundle:Booking:dprejectbooking }
+    
+dpapprovebooking:
+    path: /api/booking/dpapprovebooking/{id}
+    defaults:  { _controller: AppBundle:Booking:dpapprovebooking }
+    
+registerusertype:
+    path: /register/user-type
+    defaults:  { _controller: AppBundle:Register:getType }
+    
+registeruser:
+    path: /register/submit
+    defaults:  { _controller: AppBundle:Register:submit }
+    
+login:
+    path: /login
+    defaults:  { _controller: AppBundle:Authentication:login }
